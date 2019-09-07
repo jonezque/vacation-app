@@ -1,1 +1,13 @@
-<p>filter-panel works!</p>
+<button color="primary" [matMenuTriggerFor]="addMenu" mat-raised-button>Добавить</button>
+<button color="primary" [matMenuTriggerFor]="deleteMenu" mat-raised-button style="margin-left: 10px;">Удалить</button>
+
+<mat-menu #addMenu="matMenu">
+  <button mat-menu-item routerLink="add-employee">Сотрудника</button>
+  <button mat-menu-item routerLink="add-department">Подразделение</button>
+  <button mat-menu-item routerLink="add-position">Должность</button>
+</mat-menu>
+<mat-menu #deleteMenu="matMenu">
+  <button mat-menu-item routerLink="delete-employee">Сотрудника</button>
+  <button mat-menu-item routerLink="delete-department">Подразделение</button>
+  <button mat-menu-item routerLink="delete-position">Должность</button>
+</mat-menu>

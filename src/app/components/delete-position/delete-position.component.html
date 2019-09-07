@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-title>Удалить должность</mat-card-title>
+    <mat-card-content>
+        <div *ngFor="let pos of positions | async">
+            <mat-checkbox (change)="valueChange(pos.id, $event)">{{pos.name}}</mat-checkbox>
+        </div>
+        <div class="button">
+          <button (click)="back()" mat-button>Назад</button>
+          <button (click)="delete()" mat-button>Удалить</button>
+        </div>
+    </mat-card-content>
+  </mat-card>

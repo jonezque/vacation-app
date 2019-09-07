@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title>Удалить подразделение</mat-card-title>
+  <mat-card-content>
+      <div *ngFor="let dep of departments | async">
+          <mat-checkbox (change)="valueChange(dep.id, $event)">{{dep.name}}</mat-checkbox>
+      </div>
+      <div class="button">
+        <button (click)="back()" mat-button>Назад</button>
+        <button (click)="delete()" mat-button>Удалить</button>
+      </div>
+  </mat-card-content>
+</mat-card>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class ProfileComponent implements OnInit {
   form: FormGroup = new FormGroup({
-    displayName: new FormControl(''),
+    displayName: new FormControl('', Validators.required),
     email: new FormControl(''),
   });
   user: firebase.User;

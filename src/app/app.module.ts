@@ -17,8 +17,14 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { TableComponent } from './components/table/table.component';
 import { ToolbarPanelComponent } from './components/toolbar-panel/toolbar-panel.component';
 import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
+import { AddDepartmentComponent } from './components/add-department/add-department.component';
+import { DeleteDepartmentComponent } from './components/delete-department/delete-department.component';
+import { DeleteEmployeeComponent } from './components/delete-employee/delete-employee.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { AddPositionComponent } from './components/add-position/add-position.component';
+import { DeletePositionComponent } from './components/delete-position/delete-position.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, MainComponent, NotFoundComponent, ProfileComponent, TableComponent, ToolbarPanelComponent, FilterPanelComponent],
+  declarations: [AppComponent, LoginComponent, MainComponent, NotFoundComponent, ProfileComponent, TableComponent, ToolbarPanelComponent, FilterPanelComponent, AddDepartmentComponent, DeleteDepartmentComponent, DeleteEmployeeComponent, AddEmployeeComponent, AddPositionComponent, DeletePositionComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
