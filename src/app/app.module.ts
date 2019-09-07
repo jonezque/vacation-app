@@ -14,8 +14,11 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { MaterialModule } from './material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
+import { TableComponent } from './components/table/table.component';
+import { ToolbarPanelComponent } from './components/toolbar-panel/toolbar-panel.component';
+import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, MainComponent, NotFoundComponent, ProfileComponent],
+  declarations: [AppComponent, LoginComponent, MainComponent, NotFoundComponent, ProfileComponent, TableComponent, ToolbarPanelComponent, FilterPanelComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

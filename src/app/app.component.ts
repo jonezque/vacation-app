@@ -1,4 +1,3 @@
-import { take } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
@@ -23,9 +22,5 @@ export class AppComponent implements OnInit {
 
   moveTo(path: string) {
     return this.router.navigate([path]);
-  }
-
-  async logout() {
-    await this.afAuth.auth.signOut();
   }
 }

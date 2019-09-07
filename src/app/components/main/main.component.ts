@@ -30,4 +30,7 @@ export class MainComponent implements OnInit, OnDestroy {
     this.userSubscription.unsubscribe();
   }
 
+  async logout() {
+    await this.afAuth.auth.signOut();
+  }
 }

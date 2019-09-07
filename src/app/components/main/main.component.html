@@ -1,3 +1,10 @@
 <ng-container *ngIf="user">
-  <p>Hello {{user.displayName || 'Новый пользователь'}}</p>
+  <div class="toolbar">
+    <div routerLink="profile" style="outline: none; cursor: pointer;">
+      Пользователь: {{ user.displayName || 'Новый пользователь' }}</div>
+    <button *ngIf="user" (click)="logout()" color="warn" mat-raised-button>Выйти</button>
+  </div>
+  <app-filter-panel></app-filter-panel>
+  <app-toolbar-panel></app-toolbar-panel>
+  <app-table></app-table>
 </ng-container>

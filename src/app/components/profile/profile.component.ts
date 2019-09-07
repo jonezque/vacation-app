@@ -32,6 +32,6 @@ export class ProfileComponent implements OnInit {
   }
 
   back() {
-    return this.router.navigate(['main']);
+    return this.router.navigate(['']);
   }
 }
