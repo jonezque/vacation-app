@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import Item from 'src/app/interfaces/item';
 import { map } from 'rxjs/operators';

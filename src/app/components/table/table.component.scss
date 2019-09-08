@@ -1,0 +1,19 @@
+:host {
+  margin-top: 20px;
+  display: grid;
+  background: white;
+  border-radius: 5px;
+  padding: 3px;
+  grid-gap: 0px 10px;
+  grid-template-columns: min-content min-content min-content max-content;
+  > div {
+    display: contents;
+    white-space: nowrap;
+  }
+  .centered {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+   }
+}
+

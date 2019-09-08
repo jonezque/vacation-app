@@ -1,1 +1,11 @@
-<p>table works!</p>
+
+<div class="centered">Имя</div>
+<div class="centered">Должность</div>
+<div class="centered">Подразделение</div>
+<div class="centered"></div>
+<div *ngFor="let employee of employees | async">
+  <div>{{employee.displayName}}</div>
+  <div>{{employee.position}}</div>
+  <div>{{employee.department}}</div>
+  <div></div>
+</div>
