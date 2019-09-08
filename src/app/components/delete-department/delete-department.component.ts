@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import Item from 'src/app/interfaces/item';
 import { map } from 'rxjs/operators';
-import { MatCheckboxChange } from '@angular/material';
+import { MatCheckboxChange, MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-delete-department',
@@ -15,7 +15,7 @@ export class DeleteDepartmentComponent implements OnInit {
   departments: Observable<Item[]>;
   IdsToDelete: Map<string, boolean> = new Map();
 
-  constructor(private db: AngularFirestore, private router: Router) {}
+  constructor(private db: AngularFirestore, private dialogRef: MatDialogRef<DeleteDepartmentComponent>) {}
 
   ngOnInit() {
     this.departments = this.db.collection<Item>('departments').snapshotChanges().pipe(
@@ -39,10 +39,6 @@ export class DeleteDepartmentComponent implements OnInit {
       }
     });
     await Promise.all(ids.map(id => this.db.collection('departments').doc(id).delete()));
-    await this.back();
-  }
-
-  back() {
-    return this.router.navigate(['']);
+    this.dialogRef.close();
   }
 }

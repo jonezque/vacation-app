@@ -1,6 +1,5 @@
-<mat-card>
-  <mat-card-title>Добавить должность</mat-card-title>
-  <mat-card-content>
+<h3 mat-dialog-title>Добавить должность</h3>
+<div mat-dialog-content>
     <form [formGroup]="form">
       <p>
         <mat-form-field>
@@ -9,10 +8,9 @@
       </p>
 
       <div class="button">
-        <button type="button" (click)="back()" mat-button>Назад</button>
-        <button type="button" (click)="add()" mat-button>Добавить</button>
+        <button type="button" mat-dialog-close mat-button>Назад</button>
+        <button type="button" (click)="add()" mat-button cdkFocusInitial>Добавить</button>
       </div>
 
     </form>
-  </mat-card-content>
-</mat-card>
+  </div>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-add-position',
@@ -13,16 +14,12 @@ export class AddPositionComponent {
     name: new FormControl('', Validators.required),
   });
 
-  constructor(private db: AngularFirestore, private router: Router) {}
+  constructor(private db: AngularFirestore, private dialogRef: MatDialogRef<AddPositionComponent>) {}
 
   async add() {
     if (this.form.valid) {
       await this.db.collection('positions').add({ name: this.form.value.name });
-      await this.back();
+      this.dialogRef.close();
     }
-  }
-
-  back() {
-    return this.router.navigate(['']);
   }
 }

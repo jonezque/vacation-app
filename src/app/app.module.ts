@@ -24,7 +24,22 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
 import { AddPositionComponent } from './components/add-position/add-position.component';
 import { DeletePositionComponent } from './components/delete-position/delete-position.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, MainComponent, NotFoundComponent, ProfileComponent, TableComponent, ToolbarPanelComponent, FilterPanelComponent, AddDepartmentComponent, DeleteDepartmentComponent, DeleteEmployeeComponent, AddEmployeeComponent, AddPositionComponent, DeletePositionComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    MainComponent,
+    NotFoundComponent,
+    ProfileComponent,
+    TableComponent,
+    ToolbarPanelComponent,
+    FilterPanelComponent,
+    AddDepartmentComponent,
+    DeleteDepartmentComponent,
+    DeleteEmployeeComponent,
+    AddEmployeeComponent,
+    AddPositionComponent,
+    DeletePositionComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,9 +48,17 @@ import { DeletePositionComponent } from './components/delete-position/delete-pos
     BrowserAnimationsModule,
     AngularFireAuthModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
+  entryComponents: [
+    DeleteDepartmentComponent,
+    DeleteEmployeeComponent,
+    DeletePositionComponent,
+    AddPositionComponent,
+    AddDepartmentComponent,
+    AddEmployeeComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
