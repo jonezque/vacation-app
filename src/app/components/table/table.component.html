@@ -1,11 +1,22 @@
-
-<div class="centered">Имя</div>
+<div class="centered red">Имя</div>
 <div class="centered">Должность</div>
 <div class="centered">Подразделение</div>
-<div class="centered"></div>
+<div class="centered dates">
+  <div>
+    <mat-form-field>
+      <mat-label>Выберите месяц</mat-label>
+      <mat-select [value]="getCurrentMonth()" (selectionChange)="monthChanged($event)">
+        <mat-option *ngFor="let m of months; let idx = index" [value]="idx">
+          {{m}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    {{year}}
+  </div>
+</div>
 <div *ngFor="let employee of employees | async">
   <div>{{employee.displayName}}</div>
   <div>{{employee.position}}</div>
   <div>{{employee.department}}</div>
-  <div></div>
+  <app-day [month]="currentMonth" [year]="year"></app-day>
 </div>

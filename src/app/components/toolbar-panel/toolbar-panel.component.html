@@ -1,4 +1,5 @@
 <button color="primary" [matMenuTriggerFor]="addMenu" mat-raised-button>Добавить</button>
+<button color="primary" [matMenuTriggerFor]="editMenu" mat-raised-button style="margin-left: 10px;">Редактировать</button>
 <button color="primary" [matMenuTriggerFor]="deleteMenu" mat-raised-button style="margin-left: 10px;">Удалить</button>
 
 <mat-menu #addMenu="matMenu">
@@ -7,6 +8,11 @@
   <button mat-menu-item (click)="openDialog('add-position')">Должность</button>
 </mat-menu>
 <mat-menu #deleteMenu="matMenu">
+  <button mat-menu-item (click)="openDialog('delete-employee')">Сотрудника</button>
+  <button mat-menu-item (click)="openDialog('delete-department')">Подразделение</button>
+  <button mat-menu-item (click)="openDialog('delete-position')">Должность</button>
+</mat-menu>
+<mat-menu #editMenu="matMenu">
   <button mat-menu-item (click)="openDialog('delete-employee')">Сотрудника</button>
   <button mat-menu-item (click)="openDialog('delete-department')">Подразделение</button>
   <button mat-menu-item (click)="openDialog('delete-position')">Должность</button>

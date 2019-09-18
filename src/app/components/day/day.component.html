@@ -1,0 +1,7 @@
+<div class="day"
+  *ngFor="let day of days; let idx = index"
+  (click)="dayClicked(idx)"
+  [ngClass]="{picked: day.picked}"
+  >
+{{idx+1}}
+</div>

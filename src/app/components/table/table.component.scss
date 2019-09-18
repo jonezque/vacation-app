@@ -1,19 +1,21 @@
 :host {
   margin-top: 20px;
-  display: grid;
+  display: inline-grid;
   background: white;
   border-radius: 5px;
   padding: 3px;
-  grid-gap: 0px 10px;
-  grid-template-columns: min-content min-content min-content max-content;
+  grid-gap: 4px 15px;
+  grid-template-columns: min-content min-content min-content 1fr;
+  overflow: auto;
   > div {
     display: contents;
     white-space: nowrap;
   }
   .centered {
     display: flex;
+    align-items: center;
     justify-content: center;
     margin: 10px 0;
+    flex-direction: column;
    }
 }
-

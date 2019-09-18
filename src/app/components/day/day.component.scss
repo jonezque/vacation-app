@@ -1,0 +1,27 @@
+:host {
+  display: grid;
+  column-gap: 4px;
+  width: 100%;
+  grid-template-columns: repeat(31, min-content);
+  .day {
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    width: 22px;
+    text-align: center;
+    color: grey;
+    &.day:hover {
+      border-color: grey;
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+
+* {
+  user-select: none;
+}
+
+.picked {
+  background: tomato;
+  opacity: 0.5;
+}

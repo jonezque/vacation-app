@@ -23,6 +23,7 @@ import { DeleteEmployeeComponent } from './components/delete-employee/delete-emp
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { AddPositionComponent } from './components/add-position/add-position.component';
 import { DeletePositionComponent } from './components/delete-position/delete-position.component';
+import { DayComponent } from './components/day/day.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { DeletePositionComponent } from './components/delete-position/delete-pos
     AddEmployeeComponent,
     AddPositionComponent,
     DeletePositionComponent,
+    DayComponent,
   ],
   imports: [
     BrowserModule,

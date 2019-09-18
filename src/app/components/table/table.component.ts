@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, forkJoin, combineLatest } from 'rxjs';
+import { Observable, combineLatest } from 'rxjs';
 import { Employee } from 'src/app/interfaces/employee';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 import Item from 'src/app/interfaces/item';
+import { MatSelectChange } from '@angular/material';
 
 @Component({
   selector: 'app-table',
@@ -11,9 +12,12 @@ import Item from 'src/app/interfaces/item';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
-  employees: Observable<Employee[]>;
-
   constructor(private db: AngularFirestore) {}
+
+  months = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+  employees: Observable<Employee[]>;
+  year = 2019;
+  currentMonth = this.getCurrentMonth();
 
   ngOnInit() {
     this.employees = combineLatest(
@@ -29,6 +33,10 @@ export class TableComponent implements OnInit {
     }));
   }
 
+  getCurrentMonth() {
+    return new Date().getMonth();
+  }
+
   getData<T = Item>(table: string) {
     return this.db
       .collection<T>(table)
@@ -42,5 +50,9 @@ export class TableComponent implements OnInit {
           })
         )
       );
+  }
+
+  monthChanged(month: MatSelectChange) {
+    this.currentMonth = month.value;
   }
 }
