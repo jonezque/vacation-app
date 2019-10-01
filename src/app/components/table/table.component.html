@@ -14,9 +14,9 @@
     {{year}}
   </div>
 </div>
-<div *ngFor="let employee of employees | async">
+<div *ngFor="let employee of employees | async;let idx = index">
   <div>{{employee.displayName}}</div>
   <div>{{employee.position}}</div>
   <div>{{employee.department}}</div>
-  <app-day [month]="currentMonth" [year]="year"></app-day>
+  <app-day [index]="idx" [month]="currentMonth" [year]="year"></app-day>
 </div>

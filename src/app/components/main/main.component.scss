@@ -5,3 +5,10 @@
     align-self: center;
   }
 }
+:host {
+  display: inline-grid;
+  grid-auto-columns: min-content;
+  background: rgb(245, 245, 245);
+  margin: 0 auto;
+  padding: 5px;
+}

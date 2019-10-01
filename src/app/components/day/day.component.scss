@@ -7,12 +7,27 @@
     border: 1px solid lightgrey;
     border-radius: 2px;
     width: 22px;
+    opacity: 0.8;
     text-align: center;
     color: grey;
-    &.day:hover {
-      border-color: grey;
+    &:hover {
+      background: lightgrey;
       color: black;
       cursor: pointer;
+    }
+  }
+  .holyday {
+    border-color: rgb(255, 151, 140);
+    &:hover {
+      background: rgb(250, 147, 135);
+    }
+  }
+  .picked {
+    background: rgba(255,0,0,0.7);
+    border-color: rgba(255,0,0,0.7); 
+    color: black;
+    &:hover {
+      background: rgba(255,0,0,0.9);
     }
   }
 }
@@ -21,7 +36,3 @@
   user-select: none;
 }
 
-.picked {
-  background: tomato;
-  opacity: 0.5;
-}

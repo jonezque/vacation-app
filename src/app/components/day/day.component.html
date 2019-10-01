@@ -1,7 +1,8 @@
 <div class="day"
   *ngFor="let day of days; let idx = index"
   (click)="dayClicked(idx)"
-  [ngClass]="{picked: day.picked}"
+  [ngClass]="{picked: day.picked, holyday: day.getDay() == 6 || day.getDay() == 5}"
+  [title]="day.getDayName()"
   >
-{{idx+1}}
+ {{idx+1}}
 </div>
